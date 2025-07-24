@@ -1,5 +1,7 @@
 # Blockchain Wallet Demo
 
+**Live Demo:** [https://blockchain-wallet-demo.vercel.app/](https://blockchain-wallet-demo.vercel.app/)
+
 Technical test for Blockchain Developer position  
 Wallet connection, network detection, and visual transaction feedback  
 **Stack:** React + Vite + TypeScript + TailwindCSS + Heroicons
