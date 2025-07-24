@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Blockchain Wallet Demo
 
 Technical test for Blockchain Developer position  
@@ -46,3 +47,6 @@ The logic is easily extendable to interact with real smart contracts using ether
 Test project base repository
 https://bitbucket.org/dredsoft/ecommerce/src/main
 ```
+=======
+# blockchain
+>>>>>>> 61c21cf0d2d3c155bf1e40f836060039f62e61ca
