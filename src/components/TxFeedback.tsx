@@ -8,25 +8,25 @@ type TxFeedbackProps = {
 export default function TxFeedback({ status }: TxFeedbackProps) {
   if (status === "pending") {
     return (
-      <div className="flex items-center gap-2 bg-blue-50 text-blue-700 rounded-md px-3 py-2 mt-4 text-sm shadow transition-all">
+      <div className="w-full max-w-xs flex items-center gap-2 bg-blue-50 text-blue-700 rounded-lg px-4 py-2.5 mt-4 text-sm shadow transition-all animate-fade-in mx-auto">
         <Spinner />
-        Processing transaction...
+        <span className="font-medium">Processing transaction...</span>
       </div>
     );
   }
   if (status === "success") {
     return (
-      <div className="flex items-center gap-2 bg-green-50 text-green-700 rounded-md px-3 py-2 mt-4 text-sm shadow animate-fade-in">
-        <CheckCircleIcon className="h-5 w-5" />
-        Minted! 🎉
+      <div className="w-full max-w-xs flex items-center gap-2 bg-green-50 text-green-700 rounded-lg px-4 py-2.5 mt-4 text-sm shadow animate-fade-in mx-auto">
+        <CheckCircleIcon style={{ width: 14, height: 14 }} className="text-green-500" />
+        <span className="font-medium">Minted! 🎉</span>
       </div>
     );
   }
   if (status === "error") {
     return (
-      <div className="flex items-center gap-2 bg-red-50 text-red-700 rounded-md px-3 py-2 mt-4 text-sm shadow">
-        <ExclamationCircleIcon className="h-5 w-5" />
-        Transaction failed.
+      <div className="w-full max-w-xs flex items-center gap-2 bg-red-50 text-red-700 rounded-lg px-4 py-2.5 mt-4 text-sm shadow animate-fade-in mx-auto">
+        <ExclamationCircleIcon style={{ width: 14, height: 14 }} className="text-red-500" />
+        <span className="font-medium">Transaction failed.</span>
       </div>
     );
   }

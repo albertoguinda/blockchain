@@ -3,6 +3,8 @@ import WalletConnector from "./components/WalletConnector";
 import NetworkInfo from "./components/NetworkInfo";
 import TransactionButton from "./components/TransactionButton";
 import TxFeedback from "./components/TxFeedback";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import "./App.css"; // importa tu CSS aquí
 
 declare global {
   interface Window {
@@ -72,10 +74,16 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-blue-50 via-cyan-50 to-indigo-100">
-      <div className="w-full max-w-md mx-4 bg-white rounded-2xl shadow-xl p-6 sm:p-10 space-y-6 flex flex-col items-center">
-        <h1 className="text-2xl sm:text-3xl font-bold text-center text-indigo-700 mb-4">
-          🦊 Blockchain Wallet Demo
+    <div className="AppCenterCard">
+      <div className="Card">
+        <h1 className="text-center" style={{ fontWeight: 800, fontSize: 28, margin: 0 }}>
+          <img
+            src="/metamask.svg"
+            alt="MetaMask Logo"
+            style={{ width: 36, height: 36, marginBottom: 10 }}
+          />
+          <br />
+          Blockchain Wallet Demo
         </h1>
         <WalletConnector account={account} onConnect={connectWallet} onDisconnect={disconnectWallet} />
         <NetworkInfo network={network} />
@@ -85,14 +93,22 @@ function App() {
             <TxFeedback status={txStatus} />
           </>
         )}
-        <div className="mt-8 text-center text-gray-400 text-xs">
+        <div className="text-center" style={{ marginTop: 24 }}>
           <a
             href="https://bitbucket.org/dredsoft/ecommerce/src/main"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
+            style={{
+              color: "#6dafe6",
+              textDecoration: "underline",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 6,
+              fontSize: 16,
+            }}
           >
             Test Project Repo
+            <ArrowTopRightOnSquareIcon style={{ width: 14, height: 14, marginLeft: 4 }} />
           </a>
         </div>
       </div>
